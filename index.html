@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>스와이퍼 슬라이드</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+<link href="https://cdn.jsdelivr.net/gbodyVolumeh/sunn-us/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet"><style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        position: relative;
+        font-family: ‘SUIT’, sans-serif;
+    }
+    .bodyVolume{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        min-height:648px; 
+        background-image: url(./images/swiperMainImg.jpg);
+    }
+    .bodyVolume .swiperTitle{
+        padding: 70px 0;
+    }
+    .bodyVolume .swiperTitle .mainTitle{
+        display: none;
+    }
+    .bodyVolume .swiperTitle .swiperTitleMobile{
+        display: none;
+    }
+
+    .bodyVolume .swiper-wrapper{
+        width: 100%;
+        max-width: 1920px;
+        height: auto;
+    }
+    .bodyVolume .swiper-wrapper .swiper-slide .imgArea{
+        width: 277px !important;
+        height: 277px;
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-right: 40px;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .bodyVolume .swiper-wrapper .swiper-slide .imgArea video{
+        width: 100%;
+    }
+    .bodyVolume .swiper-wrapper .swiper-slide .imgBox{
+        position: relative;
+        width: 277px !important;
+        margin: 0;
+        padding: 0;
+    }
+    .bodyVolume .swiper-wrapper .swiper-slide .boxIcon{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .bodyVolume .swiper-wrapper .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .bodyVolume .swiperText{
+        padding: 80px 0;
+        font-size: 24px;
+        font-weight: 300;
+    }
+    .bodyVolume .swiperText, .mainTitle{
+        color: #fff;
+    }
+
+    @media (max-width:768px) {
+        .bodyVolume .swiperTitle{order: 1;}
+        .bodyVolume .swiperText{order: 2;}
+        .bodyVolume .swiper-wrapper{order: 3;}
+
+        .bodyVolume{
+            width: 100%;
+            height: 100%;
+            min-height:1011px; 
+            background-image: url(./images/swiperMainImg_m.jpg);
+        }
+        .bodyVolume .swiperTitle{
+            padding:0;
+        }
+        .bodyVolume .swiperTitle .mainTitle{
+            display: block;
+            padding: 135px 0 31px;
+            letter-spacing: 0.3em;
+        }
+        .bodyVolume .swiperTitle .swiperTitleMobile{
+            display: block;
+        }
+        .bodyVolume .swiperTitle .swiperTitlePc{
+            display: none;
+        }
+
+        .bodyVolume .swiper-wrapper .swiper-slide .imgBox{
+            width: 359px !important;
+        }
+        .bodyVolume .swiper-wrapper .swiper-slide .imgArea{
+            width: 359px !important;
+            height: 359px;
+        }    
+        .bodyVolume .swiper-wrapper .swiper-slide .boxIcon{
+            width: 100%;
+        }
+
+        .bodyVolume .swiperText{
+            padding: 53px 0 123px;
+            font-size: 24px;
+            font-weight: 300;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="swiper bodyVolume">
+        <div class="swiperTitle">
+            <div class="mainTitle">GOWOONMOM CLINIC</div>
+            <img class="swiperTitlePc" src="./images/swiperTitle.png" alt="가슴필러">
+            <img class="swiperTitleMobile" src="./images/swiperTitle_m.png" alt="가슴필러">
+        </div>
+
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="imgBox">
+                    <div class="imgArea"><img src="/images/imgArea01.jpg" alt=""></div>
+                    <div class="boxIcon"><img src="/images/boxIcon.png" alt=""></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBox">
+                    <div class="imgArea"><img src="/images/imgArea02.jpg" alt=""></div>
+                    <div class="boxIcon"><img src="/images/boxIcon.png" alt=""></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBox">
+                    <div class="imgArea">
+                        <video id="video" preload="auto" autoplay="true" playsinline loop muted>
+                            <source src="./images/thumnail01.mp4">
+                        </video>
+                    </div>
+                    <div class="boxIcon"><img src="/images/boxIcon.png" alt=""></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBox">
+                    <div class="imgArea"><img src="/images/imgArea04.jpg" alt=""></div>
+                    <div class="boxIcon"><img src="/images/boxIcon.png" alt=""></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBox">
+                    <div class="imgArea"><img src="/images/imgArea05.jpg" alt=""></div>
+                    <div class="boxIcon"><img src="/images/boxIcon.png" alt=""></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBox">
+                    <div class="imgArea">
+                        <video id="video" preload="auto" autoplay="true" playsinline loop muted>
+                            <source src="./images/thumnail01.mp4">
+                        </video>
+                    </div>
+                    <div class="boxIcon"><img src="/images/boxIcon.png" alt=""></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBox">
+                    <div class="imgArea"><img src="/images/imgArea01.jpg" alt=""></div>
+                    <div class="boxIcon"><img src="/images/boxIcon.png" alt=""></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBox">
+                    <div class="imgArea"><img src="/images/imgArea02.jpg" alt=""></div>
+                    <div class="boxIcon"><img src="/images/boxIcon.png" alt=""></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBox">
+                    <div class="imgArea">
+                        <video id="video" preload="auto" autoplay="true" playsinline loop muted>
+                            <source src="./images/thumnail01.mp4">
+                        </video>
+                    </div>
+                    <div class="boxIcon"><img src="/images/boxIcon.png" alt=""></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBox">
+                    <div class="imgArea"><img src="/images/imgArea04.jpg" alt=""></div>
+                    <div class="boxIcon"><img src="/images/boxIcon.png" alt=""></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBox">
+                    <div class="imgArea"><img src="/images/imgArea05.jpg" alt=""></div>
+                    <div class="boxIcon"><img src="/images/boxIcon.png" alt=""></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBox">
+                    <div class="imgArea">
+                        <video id="video" preload="auto" autoplay="true" playsinline loop muted>
+                            <source src="./images/thumnail01.mp4">
+                        </video>
+                    </div>
+                    <div class="boxIcon"><img src="/images/boxIcon.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiperText">
+            [ 고운몸의원 가슴필러 실제 시술 사례자 ]
+        </div>
+    </div>
+
+     <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+     <!-- Initialize Swiper -->
+     <script>
+       var swiper = new Swiper(".bodyVolume", {
+            slidesPerView: 2.05,
+            slidesOffsetBefore: 0,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: true
+            },
+            breakpoints: {
+                769: {
+                    slidesPerView: 2.5,
+                    slidesOffsetBefore: 24,
+                    slidesOffsetAfter: 24,
+                },
+                800: {
+                    slidesPerView: 3,
+                    slidesOffsetBefore: 24,
+                    slidesOffsetAfter: 24,
+                },
+                920: {
+                    slidesPerView: 3.5,
+                    slidesOffsetBefore: 24,
+                    slidesOffsetAfter: 24,
+                },
+                1200:{
+                    slidesPerView: 4.5,
+                    slidesOffsetBefore: 24,
+                    slidesOffsetAfter: 24,
+                },
+                1480:{
+                    slidesPerView: 5,
+                    slidesOffsetBefore: 24,
+                    slidesOffsetAfter: 24,
+                },
+                1920:{
+                    slidesPerView: 6,
+                    slidesOffsetBefore: 24,
+                    slidesOffsetAfter: 24,
+                },
+            },
+       });
+     </script>
+</body>
+</html>
